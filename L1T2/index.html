@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL 1 TASK 2</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .form {
+            text-align: center;
+            margin:auto;
+            background-color: teal;
+            width: 25%;
+            border-color: black 4px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .button {
+            border-radius: 8px;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: rgb(216, 211, 211);
+        }
+
+        .button1 {
+            padding: 8px 10px;
+        }
+
+        .button2 {
+            padding: 6px 20px;
+        }
+        .color-change{
+            text-align: center;
+            margin-top: 40px;
+        }
+        .color-change button{
+            height: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>calculator</h2>
+    <div id="a" class="form">
+        <div class="div">
+            <br><br>
+            <input class="button button1" id="num1" placeholder="number1"></input><br><br>
+
+            <input class="button button1" id="num2" placeholder="number2"></input><br><br>
+            <div class="sub">
+                <button class="button button2" id="plus"> +=</button><br><br>
+                <button class="button button2" id="sub"> -=</button><br><br>
+                <button class="button button2" id="mul"> *=</button><br><br>
+                <button class="button button2" id="div"> /=</button><br><br>
+                <button class="button button2" onclick="calsi()">calculator</button><br><br>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="color-change">
+        <button onclick="colorChange()">CHANGE COLOR </button>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function calsi() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            document.getElementById("plus").innerHTML = a + "+" + b + "=" + (parseInt(a) + parseInt(b));
+            document.getElementById("sub").innerHTML = a + "-" + b + "=" + (parseInt(a) - parseInt(b));
+            document.getElementById("mul").innerHTML = a + "*" + b + "=" + (parseInt(a) * parseInt(b));
+            document.getElementById("div").innerHTML = a + "/" + b + "=" + ((parseInt(a) / parseInt(b)).toFixed(2));
+        }
+
+        function colorChange(){
+            var color = document.getElementById("a");
+            color.style.backgroundColor=" rgb(245, 99, 99)";
+            alert("Background color changes");
+        }
+    </script>
+
+</body>
+
+</html>
